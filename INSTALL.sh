@@ -129,6 +129,24 @@ echo "Installing WordPress..."
 
 wp core install --url="http://$wp_home" --title="$site_title" --admin_user="$admin_user" --admin_password="$admin_password" --admin_email="$admin_email"
 
+#
+echo
+read -p "Do you want to install the H1 Theme and Feature plugins?:  " -n 1 -r
+echo
+if [[ $REPLY =~ ^[Yy]$ ]]
+then
+    git clone --depth=1 https://github.com/H1FI/h1-theme.git web/app/themes/
+    git clone --depth=1 https://github.com/H1FI/h1-project-features.git web/app/plugins/
+    
+    rm -rf web/app/themes/h1-theme/.git
+    rm -rf web/app/themes/h1-project-features/.git
+fi
+
+if [  ]
+
+cd web/app/themes/
+
+
 echo
 echo "------------------------------------------------------------"
 echo " All done! Remember to create a virtual host $wp_home       "
