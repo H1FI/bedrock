@@ -135,11 +135,11 @@ read -p "Do you want to install the H1 Theme and Feature plugins?:  " -n 1 -r
 echo
 if [[ $REPLY =~ ^[Yy]$ ]]
 then
-    git clone --depth=1 https://github.com/H1FI/h1-theme.git web/app/themes/h1-theme
-    git clone --depth=1 https://github.com/H1FI/h1-project-features.git web/app/plugins/h1-project-features
+    git clone --depth=1 https://github.com/H1FI/h1-theme.git web/app/themes/
+    git clone --depth=1 https://github.com/H1FI/h1-project-features.git web/app/plugins/
     
     rm -rf web/app/themes/h1-theme/.git
-    rm -rf web/app/themes/h1-project-features/.git
+    rm -rf web/app/plugins/h1-project-features/.git
 fi
 
 if [  ]
